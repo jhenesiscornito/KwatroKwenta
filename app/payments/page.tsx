@@ -160,107 +160,100 @@ export default function Payments() {
 
   return (
     <div className="flex flex-row h-screen">
-      {/* Left Panel */}
-      <div className="w-[320px] flex-shrink-0"> {/* Fixed width and prevent shrinking */}
+      <div className="w-[320px] flex-shrink-0">
         <LeftPanel />
       </div>
 
-      {/* Payments Div */}
-      <div className="flex-1 h-full flex flex-col overflow-hidden"> {/* Take remaining width and flex */}
+      <div className="flex-1 h-full flex flex-col overflow-hidden">
         <Calendar />
 
         <div className="flex-1 flex flex-row overflow-hidden">
-          {/* Left Section */}
-          <div className="flex-1 border-2 border-red-500 overflow-y-auto p-4">
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
-            <h2 className="text-xl font-bold mb-4">Left Section</h2>
-            <p>Content for the left section goes here.</p>
+          {/* Updated Left Section */}
+          <div className="flex-1 border-2 border-red-500 overflow-hidden p-4 flex flex-col">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold mb-2">Add Payment</h2>
+            </div>
+            <div className="flex-1 flex flex-col overflow-y-auto space-y-4">
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+            </div>
           </div>
 
-          {/* Right Section */}
+          {/* Right Section (Unchanged) */}
           <div className="flex-1 border-2 border-red-500 overflow-hidden p-4 flex flex-col">
-  {/* Payment History Section */}
-  <div className="mb-4">
-    <h2 className="text-xl font-bold mb-2">Payment History</h2>
-    <p>Month of September</p>
-  </div>
-
-  {/* Content Section that takes remaining height */}
-  <div className="flex-1 flex flex-col overflow-y-auto">
-    {/* Repeating Sections */}
-    <div className="flex flex-col space-y-4">
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-      <div>
-        <h2 className="text-xl font-bold mb-4">Left Section</h2>
-        <p>Content for the left section goes here.</p>
-      </div>
-    </div>
-  </div>
-</div>
+            <div className="mb-4">
+              <h2 className="text-xl font-bold mb-2">Payment History</h2>
+              <p>Month of September</p>
+            </div>
+            <div className="flex-1 flex flex-col overflow-y-auto space-y-4">
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Left Section</h2>
+                <p>Content for the left section goes here.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
