@@ -49,7 +49,7 @@ export default function LeftPanel() {
             {/* Navigation Buttons */}
             <div className="space-y-2 w-full ">
                 <Link href="/expenses" className="block w-full bg-gradient-to-tl from-zinc-900 to-green-700 rounded-xl py-3 px-2 text-white shadow-xl font-medium border border-white text-center hover:opacity-60 hover:text-green-400 transition duration-300"> Expenses</Link>
-                <Link href="/expenses" className="block w-full bg-gradient-to-tl from-zinc-900 to-green-700 rounded-xl py-3 px-2 text-white shadow-xl font-medium border border-white text-center hover:opacity-60 hover:text-green-400 transition duration-300">Payments</Link>
+                <Link href="/payments" className="block w-full bg-gradient-to-tl from-zinc-900 to-green-700 rounded-xl py-3 px-2 text-white shadow-xl font-medium border border-white text-center hover:opacity-60 hover:text-green-400 transition duration-300">Payments</Link>
                 <Link href="/expenses" className="block w-full bg-gradient-to-tl from-zinc-900 to-green-700 rounded-xl py-3 px-2 text-white shadow-xl font-medium border border-white text-center hover:opacity-60 hover:text-green-400 transition duration-300">Saving Goals</Link>
                 <Link href="/expenses" className="block w-full bg-gradient-to-tl from-zinc-900 to-green-700 rounded-xl py-3 px-2 text-white shadow-xl font-medium border border-white text-center hover:opacity-60 hover:text-green-400 transition duration-300">Budget Planner</Link>
             </div>

@@ -1,6 +1,19 @@
+"use client";
+
 import LeftPanel from "@/components/left-panel";
+import { useSession } from "next-auth/react";
 
 export default function Expenses() {
+  const { status } = useSession();
+
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (status === "unauthenticated") {
+    return <div>Access Denied</div>;
+  }
+
   return (
     <div className="flex">
       <LeftPanel />
