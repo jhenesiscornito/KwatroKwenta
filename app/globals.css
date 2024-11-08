@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #ededed;
   --foreground: #171717;
 }
 
@@ -14,8 +14,44 @@
   }
 }
 
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom scrollbar styles */
+.expense-history::-webkit-scrollbar {
+  width: 8px; /* Set width of scrollbar */
+}
+
+.expense-history::-webkit-scrollbar-button {
+  display: none; /* Remove up and down arrows */
+}
+
+.expense-history::-webkit-scrollbar-thumb {
+  background-color: gray; /* Customize scrollbar thumb color */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.expense-history::-webkit-scrollbar-track {
+  background-color: #ededed; /* Customize scrollbar track color */
+}
+
+/* Add this to your global stylesheet (e.g., styles/globals.css) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
 }
