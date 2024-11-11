@@ -82,31 +82,31 @@ export default function Register() {
 
                 {/* Right Container */}
                 <div className="h-full md:h-screen bg-gradient-to-br from-[#018053] to-[#001a10] p-10 md:p-20 flex flex-col justify-center lg:rounded-tl-2xl lg:rounded-bl-2xl md:rounded-tl-2xl md:rounded-bl-2xl shadow-2xl">
-                    <div className="text-center md:text-left">
+                    <div className="text-center md:text-left px-14">
                         <h1 className="text-white text-2xl md:text-3xl font-semibold fade-in">
                             Create an Account
                         </h1>
                         <form onSubmit={handleSubmit} className="pt-6 space-y-3 fade-in">
                             <input
-                                className="block w-full bg-transparent border border-gray-300 rounded-lg p-2 text-white"
+                                className="block w-full bg-transparent border border-gray-300 rounded-xl p-2 text-white pl-3"
                                 type="text"
                                 placeholder="Username"
                                 onChange={e => setName(e.target.value)}
                             />
                             <input
-                                className="block w-full bg-transparent border border-gray-300 rounded-lg p-2 text-white"
+                                className="block w-full bg-transparent border border-gray-300 rounded-xl p-2 text-white pl-3"
                                 type="email"
                                 placeholder="Email"
                                 onChange={e => setEmail(e.target.value)}
                             />
                             <input
-                                className="block w-full bg-transparent border border-gray-300 rounded-lg p-2 text-white"
+                                className="block w-full bg-transparent border border-gray-300 rounded-xl p-2 text-white pl-3"
                                 type="password"
                                 placeholder="Password"
                                 onChange={e => setPassword(e.target.value)}
                             />
 
-                            <button type="submit" className="block w-full bg-white rounded-lg p-2 text-[#018053] font-semibold hover:bg-gradient-to-br from-[#018053] to-[#001a10] hover:text-white transition duration-500 border border-gray-200">
+                            <button type="submit" className="block w-full bg-white rounded-xl p-2 text-[#018053] font-semibold hover:bg-gradient-to-br from-[#018053] to-[#001a10] hover:text-white transition duration-500 border border-gray-200">
                                 Register
                             </button>
 

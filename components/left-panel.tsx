@@ -1,9 +1,38 @@
 "use client";
 
 import Link from "next/link";
+import { signOut, useSession } from  "next-auth/react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { server } from "typescript";
 
 export default function LeftPanel() {
+
+    const router = useRouter();
+    const { data: session } = useSession();
+
+    const handleLogout = async () => {
+        console.log("Logout function called");
+        try {
+            await signOut({
+                redirect: false,
+                callbackUrl: "/login"
+            });
+            // Clear any local storage or cookies
+            localStorage.clear();
+            // Clear all cookies
+            document.cookie.split(";").forEach((c) => {
+                document.cookie = c
+                    .replace(/^ +/, "")
+                    .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+            });
+            // Force a hard reload of the page
+            window.location.href = "/login";
+        } catch (error) {
+            console.error("Error during logout:", error);
+        }
+    };
+
     const [isOpen, setIsOpen] = useState(false);
 
     const Icon1 = () => {
@@ -80,7 +109,7 @@ export default function LeftPanel() {
                     />
                     <div>
                         <p className="text-white text-xs lg:text-sm">Welcome back,</p>
-                        <p className="text-white text-lg lg:text-2xl font-semibold">Jhenesis</p>
+                        <p className="text-white text-lg lg:text-2xl font-semibold">{ session?.user?.name }</p>
                     </div>
                 </div>
 
@@ -139,16 +168,13 @@ export default function LeftPanel() {
                     >
                         Settings and Privacy 
                     </Link>
-                    <Link
-                        href="/logout"
-                        className="block w-full bg-gradient-to-br from-[#018053] to-[#001a10] rounded-xl py-2 lg:py-3 px-2 text-white shadow-lg font-medium border border-white text-center hover:opacity-75 hover:text-green-400 transition duration-300"
-                    >
+                    <button onClick={() => handleLogout()} className="block w-full bg-gradient-to-br from-[#018053] to-[#001a10] rounded-xl py-2 lg:py-3 px-2 text-white shadow-lg font-medium border border-white text-center hover:opacity-75 hover:text-green-400 transition duration-300">
                         <div className="w-6"></div>
                         <div className="absolute left-20 w-8 h-6 ">
                             <Icon5 />
                         </div>
                         <div className="flex-grow text-center">Logout</div>
-                    </Link>
+                    </button>
                 </div>
             </nav>
 

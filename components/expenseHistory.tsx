@@ -24,7 +24,7 @@ export default function expenseHistory() {
             <div className="flex items-center justify-between">
                 <div>
                 <h1 className="text-2xl text-white">Food</h1>
-                <h3 className="text-white text-sm font-extralight opacity-70">NOTE: Cake for Ian's Birthday</h3>
+                <h3 className="text-white text-sm opacity-60">NOTE: Cake for Ian's Birthday</h3>
                 </div>
                 <h1 className="text-2xl text-white font-semibold">₱ 123.00</h1>
             </div>
